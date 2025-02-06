@@ -14,3 +14,10 @@ SELECT games, COUNT(DISTINCT region) AS total_countries
 FROM t1
 GROUP BY games
 ORDER BY games;
+```
+
+| games        | total_contries |
+|--------------|----------------|
+| 1896 Summer  |       25       |
+| 1900 Summer  |       30       |
+| 1904 Summer  |       22       |
