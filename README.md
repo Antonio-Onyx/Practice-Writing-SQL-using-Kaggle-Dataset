@@ -1,5 +1,5 @@
 # Practice-Writing-SQL-using-Kaggle-Dataset
-The porpose on this is practice my SQL skills. This the [link] of the dataset(https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results).
+The porpose on this is practice my SQL skills. This the [link](https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results) of the dataset.
 
 
 ### Query 1: Mention the total no of nations who participated in each olympics game
