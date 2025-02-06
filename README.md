@@ -18,6 +18,7 @@ ORDER BY games;
 
 | games        | total_contries |
 |--------------|----------------|
-| 1896 Summer  |       25       |
-| 1900 Summer  |       30       |
-| 1904 Summer  |       22       |
+| 1896 Summer  |       12       |
+| 1900 Summer  |       31       |
+| 1904 Summer  |       14       |
+| 1906 Summer  |       20       |
