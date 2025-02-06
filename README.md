@@ -22,3 +22,32 @@ ORDER BY games;
 | 1900 Summer  |       31       |
 | 1904 Summer  |       14       |
 | 1906 Summer  |       20       |
+
+### Query 2: Which year saw the highest and lowest no of countries participating in olympics
+```SQL
+WITH t1 AS(
+	SELECT oh.games, oh.noc, olh.region
+	FROM olympics_history oh
+	JOIN olympics_history_noc_region olh ON olh.noc = oh.noc
+),
+
+t2 AS(
+SELECT games, COUNT(DISTINCT region) AS total_countries
+FROM t1
+GROUP BY games
+ORDER BY games
+)
+
+SELECT 
+	(SELECT CONCAT(games, ' - ',total_countries)
+	 FROM t2
+	 WHERE total_countries = (SELECT MAX(total_countries) FROM t2)) AS highest_countries,
+
+	 (SELECT CONCAT(games, ' - ',total_countries)
+	 FROM t2
+	 WHERE total_countries = (SELECT MIN(total_countries) FROM t2)) AS lowest_countries
+```
+
+| highest_countries | lowest_countries |
+|-------------------|------------------|
+| 2016 Summer - 204 | 1896 Summer - 12 |
